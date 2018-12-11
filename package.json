@@ -1,0 +1,25 @@
+{
+  "name": "bismark-cli",
+  "version": "0.1.0",
+  "description": "Bixmark cli to create ES6 plugins and widgets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "bismarkColombia",
+    "IoT"
+  ],
+  "author": "Bismark Colombia",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "figlet": "^1.2.1",
+    "inquirer": "^6.2.1",
+    "shelljs": "^0.8.3"
+  },
+  "bin": {
+    "bismark": "./index.js"
+  }
+}
