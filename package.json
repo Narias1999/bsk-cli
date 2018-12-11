@@ -14,6 +14,7 @@
   "author": "Bismark Colombia",
   "license": "ISC",
   "dependencies": {
+    "argv": "0.0.2",
     "chalk": "^2.4.1",
     "figlet": "^1.2.1",
     "inquirer": "^6.2.1",

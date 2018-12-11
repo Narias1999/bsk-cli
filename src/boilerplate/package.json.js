@@ -1,0 +1,30 @@
+module.exports = ({name, description}) =>`{
+  "name": "${name}",
+  "version": "1.0.0",
+  "description": "${description || ''}",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode development",
+    "build:production": "cross-env NODE_ENV=production webpack --mode production"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Bismark Colombia",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "7.1.5",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-es2015": "6.24.1",
+    "cross-env": "^5.2.0",
+    "webpack": "4.27.1",
+    "webpack-cli": "3.1.2"
+  }
+}`
