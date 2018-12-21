@@ -9,6 +9,15 @@ const scafoldingGenerator = require('./generateScaffolding');
  */
 function generator (options, type, config) {
   scafoldingGenerator(options, config);
+  if (type === 'Plugin') {
+
+  } else if (type === 'Widget') {
+    if (config) {
+
+    } else {
+      
+    }
+  }
 }
 
 module.exports = generator;

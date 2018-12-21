@@ -1,7 +1,7 @@
 const fs = require('fs');
 const shell = require('shelljs');
 const chalk = require('chalk');
-const { package, cumulocityJSON, webpack, babel, controller } = require('./boilerplate');
+const { package, cumulocityJSON, webpack, babel, controller, appHTML } = require('./boilerplate');
 
 function generateScafolding (options, config) {
   const { name } = options
@@ -21,14 +21,14 @@ function generateScafolding (options, config) {
 
     // generate folders views and src
 
-    shell.mkdir(`${path}/src/controllers`);
-    shell.mkdir(`${path}/src/modules`);
-    shell.mkdir(`${path}/views`);
+    shell.mkdir('-p', `${path}/src/controllers`);
+    shell.mkdir('-p', `${path}/src/modules`);
+    shell.mkdir('-p', `${path}/views`);
 
     // genearte controller
 
     fileGenerator('src/controllers/controllerApp.js', controller, name);
-    fileGenerator('views/app.html', controller, name);
+    fileGenerator('views/app.html', appHTML, name);
 
 
   } catch (error) {
