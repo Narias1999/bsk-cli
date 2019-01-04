@@ -11,11 +11,20 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\\.js$/,
         loader: 'babel-loader',
         query: {
           presets: ['es2015']
         }
+      },
+      {
+        test: /\\.html$/,
+        use: [{
+          loader: 'html-loader',
+          options: {
+            minimize: true
+          }
+        }],
       }
     ]
   }

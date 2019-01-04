@@ -3,7 +3,9 @@ module.exports = `myController.$inject = [
 ]
 
 function myController ($scope) {
-  $scope.saludo = 'Project created with bismark-cli';
+  $scope.welcome = "Welcome to your cumulocity plugin";
+  $scope.greeting = "Project generated with the bismark-cli";
+
 }
 
 export default myController;

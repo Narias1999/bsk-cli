@@ -3,4 +3,4 @@ exports.cumulocityJSON = require('./cumulocity.json');
 exports.webpack = require('./webpack.config');
 exports.babel = require('./.babelrc');
 exports.controller = require('./src/controllers/controllerApp');
-exports.appHTML = require('./views/app.html');
+exports.appHTML = require('./src/views/app.html');

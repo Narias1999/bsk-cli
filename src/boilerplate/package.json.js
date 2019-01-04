@@ -24,6 +24,7 @@ module.exports = ({name, description}) =>`{
     "babel-preset-env": "1.7.0",
     "babel-preset-es2015": "6.24.1",
     "cross-env": "^5.2.0",
+    "html-loader": "^0.5.5",
     "webpack": "4.27.1",
     "webpack-cli": "3.1.2"
   }
