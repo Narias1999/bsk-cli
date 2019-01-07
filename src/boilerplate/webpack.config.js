@@ -1,4 +1,4 @@
-module.exports = `const path = require('path');
+const path = require('path');
 const debug = process.env.NODE_ENV !== "production";
 
 module.exports = {
@@ -11,14 +11,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\\.js$/,
+        test: /\.js$/,
         loader: 'babel-loader',
         query: {
           presets: ['es2015']
         }
       },
       {
-        test: /\\.html$/,
+        test: /\.html$/,
         use: [{
           loader: 'html-loader',
           options: {
@@ -28,4 +28,4 @@ module.exports = {
       }
     ]
   }
-};`;
+};

@@ -1,4 +1,4 @@
-module.exports = `{
+{
   "env": {
     "production": {
       "plugins": [
@@ -7,4 +7,4 @@ module.exports = `{
     }
   },
   "plugins": ["syntax-async-functions", "transform-regenerator"]
-}`
+}

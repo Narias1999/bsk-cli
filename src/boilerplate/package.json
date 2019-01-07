@@ -1,7 +1,7 @@
-module.exports = ({name, description}) =>`{
-  "name": "${name}",
+{
+  "name": "name",
   "version": "1.0.0",
-  "description": "${description || ''}",
+  "description": "description",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode development",
@@ -28,4 +28,4 @@ module.exports = ({name, description}) =>`{
     "webpack": "4.27.1",
     "webpack-cli": "3.1.2"
   }
-}`
+}

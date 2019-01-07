@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 const inquirer = require('inquirer');
 const chalk = require('chalk');
 const generate = require('./src');
@@ -49,7 +51,7 @@ if (fs.existsSync(`${process.cwd()}/cumulocity.json`)) {
   if (options.name) {
     init();
   } else {
-    console.log(`Por favor ingrese el nombre del plugin/widget con: ${chalk.blue('bismark -n project-name')}`);
+    console.log(`Set the plugin/widget name: ${chalk.blue('bismark -n project-name')}`);
   }
 } else {
   console.log('You should be in a cumulocity project');

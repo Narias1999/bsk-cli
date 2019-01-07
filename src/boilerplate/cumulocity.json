@@ -1,0 +1,14 @@
+{
+  "name": "name",
+  "description": "description",
+  "ngModules": [
+    "app.module",
+    "app.config"
+  ],
+  "js": [
+    "dist/bundle.js"
+  ],
+  "imports": [],
+  "css": [],
+  "copy": []
+}

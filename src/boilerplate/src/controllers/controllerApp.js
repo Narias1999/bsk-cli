@@ -1,4 +1,4 @@
-module.exports = `myController.$inject = [
+myController.$inject = [
   '$scope'
 ]
 
@@ -9,4 +9,3 @@ function myController ($scope) {
 }
 
 export default myController;
-`;
