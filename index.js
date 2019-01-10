@@ -25,7 +25,7 @@ async function init() {
     `Welcome to the ${chalk.blue('bismark-cli')} for cumulocity ES6 plugins and widgets \n`
   )
 
-  const type = await inquirer.prompt({
+  const { choice } = await inquirer.prompt({
     message: 'What do you want to generate?',
     name: 'choice',
     type: 'list',
@@ -33,17 +33,18 @@ async function init() {
   });
 
   let config = false;
-  if (type.choice === 'Widget') {
-    const config = await inquirer.prompt({
+  if (choice === 'Widget') {
+    config = await inquirer.prompt({
       message: 'Do you want a config module?',
       name: 'choice',
       type: 'list',
       choices: ['Yes', 'No']
     });
     if (config.choice === 'Yes') config = true;
+    else config = false
   }
 
-  generate(options, type.choice, config);
+  generate(options, choice, config);
 }
 
 // check if a cumulocity.json exists
