@@ -1,11 +1,11 @@
-import myController from './../controllers/controllerApp';
+import appController from './../controllers/controllerApp';
 import template from './../views/app.html'
 import component from './../components/welcome';
 
-const module = angular.module('test.module', []);
+const module = angular.module('app.module', []);
 module.config(configure);
 module.component('helloComponent', component);
-module.controller('myController', myController);
+module.controller('appController', appController);
 
 configure.$inject = [
   'c8yNavigatorProvider',
@@ -14,7 +14,7 @@ configure.$inject = [
 
 function configure(c8yNavigatorProvider, c8yViewsProvider) {
   c8yNavigatorProvider.addNavigation({
-    name: 'test',
+    name: 'nameToReplace',
     icon: 'cube',
     priority: 100000,
     path: 'test'

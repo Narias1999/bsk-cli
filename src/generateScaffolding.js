@@ -6,13 +6,10 @@ const edit = require('./utils/edit')
 
 async function generateScafolding (options, config) {
   const { name, description } = options;
-  console.log(name, description);
   try {
-    console.log(config);
     const path = `${process.cwd()}/plugins/${name}`;
     if (fs.existsSync(path)) {
-      console.log(chalk.red('Error'));
-      console.log(`The plugin with name ${name} already exits in your app`);
+      console.log(chalk.red(`The plugin with name ${name} already exits in your app`));
       process.exit(0);
     }
 
@@ -25,6 +22,7 @@ async function generateScafolding (options, config) {
       return position != 0 ? '-' + letter.toLowerCase() : letter.toLowerCase()
     })
     edit(`${path}/package.json`, dashSeparated, 'nameToReplace');
+    edit(`${path}/src/modules/app.js`, name, 'nameToReplace');
     edit(`${path}/cumulocity.json`, name, 'nameToReplace');
 
 

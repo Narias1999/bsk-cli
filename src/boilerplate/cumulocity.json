@@ -2,8 +2,7 @@
   "name": "nameToReplace",
   "description": "description",
   "ngModules": [
-    "app.module",
-    "app.config"
+    "app.module"
   ],
   "js": [
     "dist/bundle.js"

@@ -1,4 +1,5 @@
 const scafoldingGenerator = require('./generateScaffolding');
+const putInCumulocityJSON = require('./putInCumulocityJSON')
 /**
  * 
  * @param {Object} options
@@ -7,17 +8,9 @@ const scafoldingGenerator = require('./generateScaffolding');
  * @param {String} type 
  * @param {boolean} config 
  */
-function generator (options, type, config) {
-  scafoldingGenerator(options, config);
-  if (type === 'Plugin') {
-
-  } else if (type === 'Widget') {
-    if (config) {
-
-    } else {
-      
-    }
-  }
+async function generator (options, type, config) {
+  await scafoldingGenerator(options, config)
+  putInCumulocityJSON(options.name)
 }
 
 module.exports = generator;
